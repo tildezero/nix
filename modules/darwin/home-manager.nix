@@ -40,6 +40,7 @@ in
       "Calculate84" = 1459712793;
       "Bitwarden" = 1352778147;
       "JSON Peep" = 1458969831;
+      "AdGuard for Safari" = 1440147259;
     };
   };
 
