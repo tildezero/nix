@@ -1,15 +1,23 @@
-{ config, pkgs, lib, ... }:
-
-let name = "Suhas Voolla";
-    user = "suhas";
-    email = "hi@suhas.one"; in
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+
+let
+  name = "Suhas Voolla";
+  user = "suhas";
+  email = "hi@suhas.one";
+in
+{
+
+
 
   # Shared shell configuration
   zsh = {
     enable = true;
     autocd = true;
-    
 
     initContent = lib.mkBefore ''
       if [[ -f /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ]]; then
@@ -57,7 +65,7 @@ let name = "Suhas Voolla";
     extraConfig = {
       init.defaultBranch = "main";
       core = {
-	    editor = "vim";
+        editor = "vim";
         autocrlf = "input";
       };
       pull.rebase = true;
@@ -67,8 +75,15 @@ let name = "Suhas Voolla";
 
   vim = {
     enable = true;
-    plugins = with pkgs.vimPlugins; [ vim-airline vim-airline-themes vim-startify vim-tmux-navigator ];
-    settings = { ignorecase = true; };
+    plugins = with pkgs.vimPlugins; [
+      vim-airline
+      vim-airline-themes
+      vim-startify
+      vim-tmux-navigator
+    ];
+    settings = {
+      ignorecase = true;
+    };
     extraConfig = ''
       "" General
       set number
@@ -173,19 +188,14 @@ let name = "Suhas Voolla";
 
       let g:airline_theme='bubblegum'
       let g:airline_powerline_fonts = 1
-      '';
-     };
-
+    '';
+  };
 
   ssh = {
     enable = true;
     includes = [
-      (lib.mkIf pkgs.stdenv.hostPlatform.isLinux
-        "/home/${user}/.ssh/config_external"
-      )
-      (lib.mkIf pkgs.stdenv.hostPlatform.isDarwin
-        "/Users/${user}/.ssh/config_external"
-      )
+      (lib.mkIf pkgs.stdenv.hostPlatform.isLinux "/home/${user}/.ssh/config_external")
+      (lib.mkIf pkgs.stdenv.hostPlatform.isDarwin "/Users/${user}/.ssh/config_external")
     ];
     matchBlocks = {
       # Example SSH configuration for GitHub
@@ -213,7 +223,7 @@ let name = "Suhas Voolla";
       {
         plugin = power-theme;
         extraConfig = ''
-           set -g @tmux_power_theme 'gold'
+          set -g @tmux_power_theme 'gold'
         '';
       }
       {
@@ -284,11 +294,12 @@ let name = "Suhas Voolla";
       bind-key -T copy-mode-vi 'C-k' select-pane -U
       bind-key -T copy-mode-vi 'C-l' select-pane -R
       bind-key -T copy-mode-vi 'C-\' select-pane -l
-      '';
-    };
+    '';
+  };
 
-    starship = {
-      enable = true;
-      enableZshIntegration = true;
-    };
+  starship = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
 }
