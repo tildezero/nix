@@ -73,8 +73,7 @@ in
     entries = [
       { path = "/Applications/Launchpad.app/"; }
       { path = "/Applications/iTerm.app"; }
-            { path = "/System/Applications/Music.app/"; }
-
+      { path = "/System/Applications/Music.app/"; }
       { path = "/Applications/Safari.app/"; }
       { path = "/System/Applications/Messages.app/"; }
       { path = "/System/Applications/System Settings.app/"; }

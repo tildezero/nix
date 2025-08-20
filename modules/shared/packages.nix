@@ -17,8 +17,6 @@ with pkgs; [
   zip
 
   # Encryption and security tools
-  age
-  age-plugin-yubikey
   gnupg
   libfido2
 
