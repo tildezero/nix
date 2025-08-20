@@ -5,10 +5,6 @@ let name = "Suhas Voolla";
     email = "hi@suhas.one"; in
 {
 
-  imports = [
-    ./config/starship
-  ];
-
   # Shared shell configuration
   zsh = {
     enable = true;
@@ -291,8 +287,8 @@ let name = "Suhas Voolla";
       '';
     };
 
-    # starship = {
-    #   enable = true;
-    #   enableZshIntegration = true;
-    # };
+    starship = {
+      enable = true;
+      enableZshIntegration = true;
+    };
 }
