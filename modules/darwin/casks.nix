@@ -6,6 +6,7 @@ _:
   "visual-studio-code"
   "podman-desktop"
   "iterm2"
+  "termius"
 
   # Productivity Tools
   "raycast"
@@ -13,6 +14,8 @@ _:
   "craft"
   "notion"
   "notion-calendar"
+  "slack"
+  "obsidian"
 
   # Browsers
   "zen"
@@ -20,11 +23,14 @@ _:
   # Communication Tools
   "discord"
   "beeper"
+  "zoom"
 
   # Utilities
   "jordanbaird-ice"
   "numi"
   "bitwarden"
   "selfcontrol"
+  "windscribe"
+  "steam"
 
 ]

@@ -2,7 +2,6 @@
 
 with pkgs; [
   # General packages for development and system management
-  alacritty
   aspell
   aspellDicts.en
   bash-completion
@@ -51,11 +50,15 @@ with pkgs; [
   zsh-powerlevel10k
 
   # Python packages
-  python3
+  python313
   virtualenv
+  python313Packages.pip
+  pipx
 
   # NixOS formatter
   nixfmt-rfc-style
 
+  # suhas's additions
   starship
+  aerc
 ]

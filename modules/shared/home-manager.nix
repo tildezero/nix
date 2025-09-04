@@ -44,6 +44,12 @@ in
           nix-shell '<nixpkgs>' -A "$1"
       }
 
+      utcs () {
+        ssh suhas@$1.cs.utexas.edu
+      }
+
+      alias ds='pushd /etc/nix-darwin && nix run .#build-switch && popd'
+
       # Use difftastic, syntax-aware diffing
       alias diff=difft
 
