@@ -23,13 +23,18 @@
       url = "github:homebrew/homebrew-cask";
       flake = false;
     };
+    homebrew-nextfire = {
+      url = "github:nextfire/homebrew-tap";
+      flake = false;
+    };
+
     disko = {
       url = "github:nix-community/disko";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, darwin, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, home-manager, nixpkgs, disko } @inputs:
+  outputs = { self, darwin, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, homebrew-nextfire, home-manager, nixpkgs, disko } @inputs:
     let
       user = "suhas";
       linuxSystems = [ "x86_64-linux" "aarch64-linux" ];
@@ -91,6 +96,7 @@
                   "homebrew/homebrew-core" = homebrew-core;
                   "homebrew/homebrew-cask" = homebrew-cask;
                   "homebrew/homebrew-bundle" = homebrew-bundle;
+                  "nextfire/homebrew-tap" = homebrew-nextfire;
                 };
                 mutableTaps = false;
                 autoMigrate = true;

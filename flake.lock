@@ -124,6 +124,22 @@
         "type": "github"
       }
     },
+    "homebrew-nextfire": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1752569038,
+        "narHash": "sha256-u1aV39ddlpq7FenF+KqXg5jI5ypKrFypgJbZ8mWlZL0=",
+        "owner": "nextfire",
+        "repo": "homebrew-tap",
+        "rev": "d8f78a6836df6ed43565435616f9fe4520833151",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nextfire",
+        "repo": "homebrew-tap",
+        "type": "github"
+      }
+    },
     "nix-homebrew": {
       "inputs": {
         "brew-src": "brew-src"
@@ -182,6 +198,7 @@
         "homebrew-bundle": "homebrew-bundle",
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
+        "homebrew-nextfire": "homebrew-nextfire",
         "nix-homebrew": "nix-homebrew",
         "nixpkgs": "nixpkgs_2"
       }

@@ -18,6 +18,15 @@ in
   zsh = {
     enable = true;
     autocd = true;
+    oh-my-zsh = {
+      enable = true;
+      plugins = [ 
+        "git" 
+        "z" 
+      ];
+    };
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
 
     initContent = lib.mkBefore ''
       if [[ -f /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ]]; then
@@ -50,13 +59,6 @@ in
 
       alias ds='pushd /etc/nix-darwin && nix run .#build-switch && popd'
 
-      # Use difftastic, syntax-aware diffing
-      alias diff=difft
-
-      # Always color ls and group directories
-      alias ls='ls --color=auto'
-
-      # eval "$(starship init zsh)"
     '';
   };
 

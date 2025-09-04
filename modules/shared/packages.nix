@@ -14,6 +14,9 @@ with pkgs; [
   sqlite
   wget
   zip
+  oh-my-zsh
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 
   # Encryption and security tools
   gnupg

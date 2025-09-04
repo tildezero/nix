@@ -21,6 +21,7 @@ in
 
   homebrew = {
     enable = true;
+    brews = [ "apple-music-discord-rpc" ];
     casks = pkgs.callPackage ./casks.nix {};
     # onActivation.cleanup = "uninstall";
 
