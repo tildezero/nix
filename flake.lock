@@ -140,6 +140,22 @@
         "type": "github"
       }
     },
+    "homebrew-osx-cross": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1739961774,
+        "narHash": "sha256-/v9PLgSk96NPQIXD5+ZZClCDnFhp6zKs00CE/mDHIHA=",
+        "owner": "osx-cross",
+        "repo": "homebrew-arm",
+        "rev": "0746cebf8fcfeac77fa7d9955d58ccee47c04b55",
+        "type": "github"
+      },
+      "original": {
+        "owner": "osx-cross",
+        "repo": "homebrew-arm",
+        "type": "github"
+      }
+    },
     "nix-homebrew": {
       "inputs": {
         "brew-src": "brew-src"
@@ -199,6 +215,7 @@
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
         "homebrew-nextfire": "homebrew-nextfire",
+        "homebrew-osx-cross": "homebrew-osx-cross",
         "nix-homebrew": "nix-homebrew",
         "nixpkgs": "nixpkgs_2"
       }

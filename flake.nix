@@ -27,6 +27,10 @@
       url = "github:nextfire/homebrew-tap";
       flake = false;
     };
+    homebrew-osx-cross = {
+      url = "github:osx-cross/homebrew-arm";
+      flake = false;
+    };
 
     disko = {
       url = "github:nix-community/disko";
@@ -34,7 +38,7 @@
     };
   };
 
-  outputs = { self, darwin, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, homebrew-nextfire, home-manager, nixpkgs, disko } @inputs:
+  outputs = { self, darwin, nix-homebrew, homebrew-bundle, homebrew-core, homebrew-cask, homebrew-nextfire, homebrew-osx-cross, home-manager, nixpkgs, disko } @inputs:
     let
       user = "suhas";
       linuxSystems = [ "x86_64-linux" "aarch64-linux" ];
@@ -97,6 +101,7 @@
                   "homebrew/homebrew-cask" = homebrew-cask;
                   "homebrew/homebrew-bundle" = homebrew-bundle;
                   "nextfire/homebrew-tap" = homebrew-nextfire;
+                  "osx-cross/homebrew-arm" = homebrew-osx-cross; 
                 };
                 mutableTaps = false;
                 autoMigrate = true;

@@ -21,8 +21,20 @@ in
 
   homebrew = {
     enable = true;
-    brews = [ "apple-music-discord-rpc" ];
+    brews = [ 
+      "apple-music-discord-rpc" 
+      "arm-gcc-bin" 
+      "openocd"
+      "boost"
+      "gcc@11"
+      "cmake"
+      "googletest"
+    ];
     casks = pkgs.callPackage ./casks.nix {};
+    onActivation = {
+      autoUpdate = true;
+      upgrade = true;
+    };
     # onActivation.cleanup = "uninstall";
 
     # These app IDs are from using the mas CLI app
@@ -42,6 +54,7 @@ in
       "Bitwarden" = 1352778147;
       "JSON Peep" = 1458969831;
       "AdGuard for Safari" = 1440147259;
+      "Silicio Mini Player + Widgets" = 933627574;
     };
   };
 

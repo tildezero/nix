@@ -38,6 +38,8 @@ with pkgs; [
 
   # Node.js development tools
   nodejs_24
+  yarn
+  bun
 
   # Text and terminal utilities
   htop
@@ -56,7 +58,9 @@ with pkgs; [
   python313
   virtualenv
   python313Packages.pip
+  pipenv
   pipx
+  # python310
 
   # NixOS formatter
   nixfmt-rfc-style

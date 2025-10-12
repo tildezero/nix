@@ -32,5 +32,7 @@ _:
   "selfcontrol"
   "windscribe"
   "steam"
+  "bruno"
+
 
 ]
