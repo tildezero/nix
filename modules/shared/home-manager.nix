@@ -40,9 +40,11 @@ in
       export PATH=$HOME/.local/share/bin:$PATH
       export PATH=$HOME/code/clang-llvm/bin:$PATH
       export PATH=/opt/podman/bin:$PATH
+      export PATH="/Users/suhas/.deno/bin:$PATH"
 
       # Remove history data we don't want to see
       export HISTIGNORE="pwd:ls:cd"
+      alias vim="vim -X"
 
       # Vim is my editor
       export ALTERNATE_EDITOR=""
